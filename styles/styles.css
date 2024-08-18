@@ -1,0 +1,106 @@
+* {
+    padding: 0%;
+    margin: 0%;
+}
+
+.header{
+    padding: 2% 0% 2% 0%;
+}
+.header-image{
+    width: auto;
+    height: auto;    
+}
+
+body{
+    box-sizing: border-box;
+}
+
+.page-body{
+    padding: 0.1% 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap:50px
+}
+
+.content-body{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+textarea{
+    resize: none;
+    font-size: 1.125rem;
+    width: 65%;
+    margin-top: 5%;
+    margin-bottom: 3%;
+    font-family: cursive;
+    background-color: yellowgreen;
+}
+
+.info-image{
+    width: 25%;
+    margin-top: 1%;
+    margin-bottom: 3%;    
+}
+
+.buttons-encrypt-decrypts{
+    display: flex;    
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    margin-top: 1%;
+}
+
+.button-encrypt{
+    width: 32.5%;
+    padding: 8.5px 0px;
+    border-radius: 15px;
+    font-size: 1.125rem;
+    font-weight: 250;
+
+}
+
+.button-decrypt{
+    width: 32.5%;
+    padding: 8.5px 0px;
+    border-radius: 15px;
+    font-size: 1.125rem;
+    font-weight: 250;
+    color: yellowgreen;
+    background-color: violet;
+}
+
+.card{
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 500px;
+    height: auto;
+    border-radius: 5px;    
+}
+.container {
+    padding: 2px 16px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;    
+  }
+
+.image-puppet-searching{
+    width: auto;
+    height: 300px;
+    
+}
+.empty-message{
+    color: blueviolet;
+    margin: 2% 2%;
+    
+}
+
+.info-message{
+    color: crimson;
+    margin: 2% 2%;
+}
