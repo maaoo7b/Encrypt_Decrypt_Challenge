@@ -98,6 +98,7 @@ body {
     font-size: 1.125rem;
     font-weight: 250;
     font-family: var(--font_krona_one);    
+    border: none;
 }
 .button-encrypt:hover{
     background-color: #7DBBC3;
@@ -112,6 +113,7 @@ body {
     font-family: var(--font_krona_one);
     color: var(--text-color);
     background-color: var(--buttonEncrypt-color);
+    border: none;
 }
 .button-decrypt:hover{
     background-color: #7DBBC3;
