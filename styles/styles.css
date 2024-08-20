@@ -1,106 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playwrite+CO:wght@100..400&display=swap');
+
+:root{
+    --font_montserrat: "Monserrat", sans-serif;
+    --font_krona_one: "Krona One", sans-serif;
+    --font_Playwrite_CO: "Playwrite CO",sans-serif;
+}
+
 * {
     padding: 0%;
     margin: 0%;
 }
 
-.header{
-    padding: 2% 0% 2% 0%;
+.header {
+    padding: 1% 0% 1% 0%;
 }
-.header-image{
+
+.header-image {
+    display: flex;
     width: auto;
     height: auto;    
+    margin-top: 0.5%;
 }
 
-body{
+body {
     box-sizing: border-box;
+    margin-top: -10px; /* Adjusts the top margin to move up the content */
 }
 
-.page-body{
-    padding: 0.1% 8%;
+.page-body {
+    padding: 0% 6%;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    gap:50px
+    gap: 20px; /* Reduced gap to move items closer */
+    margin-top: -20px; /* Adjusted to move content up */
 }
 
-.content-body{
+.content-body {
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 4px;
 }
 
-textarea{
+.textarea-input {
     resize: none;
     font-size: 1.125rem;
     width: 65%;
-    margin-top: 5%;
-    margin-bottom: 3%;
-    font-family: cursive;
+    margin-top: 3%;
+    margin-bottom: 2%;
+    font-family: var(--font_Playwrite_CO);
     background-color: yellowgreen;
 }
 
-.info-image{
-    width: 25%;
-    margin-top: 1%;
-    margin-bottom: 3%;    
+.textarea-output {
+    resize: none;
+    font-size: 1.125rem;
+    width: 93%;
+    height: 100px;
+    margin: 3% 3%;
+    font-family: var(--font_Playwrite_CO);
+    border: none;
 }
 
-.buttons-encrypt-decrypts{
+.info-image {
+    width: 25%;
+    height: auto;
+    margin-top: 0.5%;
+    margin-bottom: 2%;    
+}
+
+.buttons-encrypt-decrypts {
     display: flex;    
     flex-direction: row;
     align-items: center;
-    gap: 8px;
-    margin-top: 1%;
+    gap: 6px; /* Reduced gap to move buttons closer */
+    margin-top: 0.5%; /* Adjusted to move buttons up */
 }
 
-.button-encrypt{
+.button-encrypt {
     width: 32.5%;
     padding: 8.5px 0px;
     border-radius: 15px;
     font-size: 1.125rem;
     font-weight: 250;
-
+    font-family: var(--font_krona_one);
 }
 
-.button-decrypt{
+.button-decrypt {
     width: 32.5%;
     padding: 8.5px 0px;
     border-radius: 15px;
     font-size: 1.125rem;
     font-weight: 250;
+    font-family: var(--font_krona_one);
     color: yellowgreen;
     background-color: violet;
 }
 
-.card{
+.card {
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     transition: 0.3s;
     width: 500px;
     height: auto;
-    border-radius: 5px;    
+    border-radius: 5px;
+    margin-top: -15px; /* Adjusted to move card up */
 }
+
 .container {
     padding: 2px 16px;
     display: flex;
     align-items: center;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;    
-  }
+}
 
-.image-puppet-searching{
+.image-puppet-searching {
     width: auto;
-    height: 300px;
-    
-}
-.empty-message{
-    color: blueviolet;
-    margin: 2% 2%;
-    
+    height: 280px; /* Reduced height to move the image up */
 }
 
-.info-message{
+.empty-message {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto; 
+    color: blueviolet;
+    font-family: var(--font_krona_one);    
+    font-size: 1rem;
+    font-weight: 900;
+    margin: 2% 2%; 
+
+}
+
+.info-message {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     color: crimson;
     margin: 2% 2%;
+    font-family: var(--font_krona_one);  
+    font-size: 0.6rem;
+    font-weight: 200;
+}
+
+.footer {
+    background-color: blue;
+    margin-top: 4%;
+    padding: 15px;
+    text-align: center;    
+    font-size: 1.25rem;
+    font-family: var(--font_montserrat);
+    font-weight: 300;
 }
