@@ -4,6 +4,14 @@
     --font_montserrat: "Monserrat", sans-serif;
     --font_krona_one: "Krona One", sans-serif;
     --font_Playwrite_CO: "Playwrite CO",sans-serif;
+
+    --primary-color-bkg: #E5F9E0;
+    --footer-color: #2F9C95;
+    --textarea-color : #DADAD9;
+    --noMessage-color: #36382E;
+    --infoMessage-color: #5E5C6C;
+    --buttonEncrypt-color: #0B5563;
+    --text-color:#F4F3EE
 }
 
 * {
@@ -25,6 +33,7 @@
 body {
     box-sizing: border-box;
     margin-top: -10px; /* Adjusts the top margin to move up the content */
+    color: var(--primary-color-bkg);
 }
 
 .page-body {
@@ -50,7 +59,8 @@ body {
     margin-top: 3%;
     margin-bottom: 2%;
     font-family: var(--font_Playwrite_CO);
-    background-color: yellowgreen;
+    background-color: var(--textarea-color);
+    color: #535657;
 }
 
 .textarea-output {
@@ -61,6 +71,7 @@ body {
     margin: 3% 3%;
     font-family: var(--font_Playwrite_CO);
     border: none;
+    background-color: var(--textarea-color);
 }
 
 .info-image {
@@ -81,10 +92,15 @@ body {
 .button-encrypt {
     width: 32.5%;
     padding: 8.5px 0px;
+    background-color: var(--buttonEncrypt-color);
+    color: var(--text-color);
     border-radius: 15px;
     font-size: 1.125rem;
     font-weight: 250;
-    font-family: var(--font_krona_one);
+    font-family: var(--font_krona_one);    
+}
+.button-encrypt:hover{
+    background-color: #7DBBC3;
 }
 
 .button-decrypt {
@@ -94,8 +110,11 @@ body {
     font-size: 1.125rem;
     font-weight: 250;
     font-family: var(--font_krona_one);
-    color: yellowgreen;
-    background-color: violet;
+    color: var(--text-color);
+    background-color: var(--buttonEncrypt-color);
+}
+.button-decrypt:hover{
+    background-color: #7DBBC3;
 }
 
 .card {
@@ -127,7 +146,7 @@ body {
     align-items: center;
     text-align: center;
     margin: 0 auto; 
-    color: blueviolet;
+    color: var(--noMessage-color);
     font-family: var(--font_krona_one);    
     font-size: 1rem;
     font-weight: 900;
@@ -140,7 +159,7 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: crimson;
+    color: var(--infoMessage-color);
     margin: 2% 2%;
     font-family: var(--font_krona_one);  
     font-size: 0.6rem;
@@ -148,11 +167,12 @@ body {
 }
 
 .footer {
-    background-color: blue;
+    background-color: var(--buttonEncrypt-color);
     margin-top: 4%;
     padding: 15px;
     text-align: center;    
     font-size: 1.25rem;
     font-family: var(--font_montserrat);
     font-weight: 300;
+    color: var(--text-color);
 }
