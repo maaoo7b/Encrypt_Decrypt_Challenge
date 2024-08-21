@@ -13,20 +13,20 @@
 
     <main class="page-body">
         <section class="content-body">            
-            <textarea class="textarea-input" rows="5" cols="105" placeholder="Type the text to encrypt here!!"></textarea>                
+            <textarea id="message-encrypt" class="textarea-input" rows="5" cols="105" placeholder="Type the text to encrypt here!!"></textarea>                
             <img class="info-image" src="./assets/infoDisclaimer.png" alt="Info disclaimer logo">
             <div class="buttons-encrypt-decrypts">
-                <button class="button-encrypt" onclick=" ">Encrypt!</button>
-                <button class="button-decrypt" onclick=" ">Decrypt!</button>
+                <button class="button-encrypt" onclick="getText();">Encrypt!</button>
+                <button class="button-decrypt" onclick="displayDecryptedMessage();">Decrypt!</button>
             </div>
         </section>         
         
         <div class="card">
-            <textarea class="textarea-output" rows="5" cols="105"></textarea>                
-            <img class="image-puppet-searching" src="./assets/puppetLooking.png" alt="Info disclaimer logo">
+            <textarea id="message-encrypted" class="textarea-output" rows="5" cols="105"></textarea>                
+            <img id="image-searching" class="image-puppet-searching" src="./assets/puppetLooking.png" alt="Info disclaimer logo">
             <div class="container">
-                <p class="empty-message">¡¡¡No message was found!!!</p>
-                <p class="info-message">Type the text you want to encrypt/decrypt</p>                
+                <p id="empty-message" class="empty-message">¡¡¡No message was found!!!</p>
+                <p id="info-message" class="info-message">Type the text you want to encrypt/decrypt</p>                
             </div>            
 
         </div>        
@@ -37,5 +37,7 @@
             Developed by: Brayan Mauricio Cruz Martínez
         </p>
     </footer>
+
+    <script src="encrypt_decrypt.js"></script>
 </body>
 </html>
