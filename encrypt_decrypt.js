@@ -2,6 +2,9 @@ function getText(action){
     let message = document.getElementById('message-encrypt').value;
     if(action === 'encrypt'){
         document.getElementById('message-encrypt').value = ""; 
+        document.getElementById("image-searching").style.visibility = "hidden";
+        document.getElementById("empty-message").style.visibility = "hidden";
+        document.getElementById("info-message").style.visibility = "hidden";
         document.getElementById('message-encrypted').innerHTML = encryptMessage(message);
     } else{
         document.getElementById('message-encrypted').innerHTML = decryptMessage(message);
@@ -27,3 +30,10 @@ function decryptMessage(text){
     .replace(/ufat/g, 'u');
     return decryptedText;
 }
+
+function copy() {
+    let copyText = document.querySelector("#message-encrypted");
+    copyText.select();
+    document.execCommand("copy");
+  }
+document.querySelector("#copy").addEventListener("click", copy);

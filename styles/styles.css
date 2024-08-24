@@ -193,7 +193,7 @@ body {
 .footer {
     background-color: var(--buttonEncrypt-color);
     margin-top: 4%;
-    padding: 15px;
+    padding: 10px;
     text-align: center;
     font-size: 1.25rem;
     font-family: var(--font_montserrat);
