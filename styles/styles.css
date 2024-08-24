@@ -1,17 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playwrite+CO:wght@100..400&display=swap');
 
-:root{
+:root {
     --font_montserrat: "Monserrat", sans-serif;
     --font_krona_one: "Krona One", sans-serif;
     --font_Playwrite_CO: "Playwrite CO",sans-serif;
 
     --primary-color-bkg: #E5F9E0;
     --footer-color: #2F9C95;
-    --textarea-color : #DADAD9;
+    --textarea-color: #DADAD9;
     --noMessage-color: #36382E;
     --infoMessage-color: #5E5C6C;
     --buttonEncrypt-color: #0B5563;
-    --text-color:#F4F3EE
+    --text-color: #F4F3EE;
 }
 
 * {
@@ -32,7 +32,7 @@
 
 body {
     box-sizing: border-box;
-    margin-top: -10px; /* Adjusts the top margin to move up the content */
+    margin-top: -10px;
     color: var(--primary-color-bkg);
 }
 
@@ -41,8 +41,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    gap: 20px; /* Reduced gap to move items closer */
-    margin-top: -20px; /* Adjusted to move content up */
+    gap: 20px;
+    margin-top: -20px;
 }
 
 .content-body {
@@ -78,15 +78,15 @@ body {
     width: 25%;
     height: auto;
     margin-top: 0.5%;
-    margin-bottom: 2%;    
+    margin-bottom: 2%;
 }
 
 .buttons-encrypt-decrypts {
-    display: flex;    
+    display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 6px; /* Reduced gap to move buttons closer */
-    margin-top: 0.5%; /* Adjusted to move buttons up */
+    gap: 6px;
+    margin-top: 0.5%;
 }
 
 .button-encrypt {
@@ -97,10 +97,14 @@ body {
     border-radius: 15px;
     font-size: 1.125rem;
     font-weight: 250;
-    font-family: var(--font_krona_one);    
+    font-family: var(--font_krona_one);
     border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.button-encrypt:hover{
+
+.button-encrypt:hover {
     background-color: #7DBBC3;
 }
 
@@ -114,9 +118,28 @@ body {
     color: var(--text-color);
     background-color: var(--buttonEncrypt-color);
     border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.button-decrypt:hover{
+
+.button-decrypt:hover {
     background-color: #7DBBC3;
+}
+
+.button-copy {
+    width: 32.5%;
+    padding: 8.5px 0px;
+    border-radius: 15px;
+    font-size: 1.125rem;
+    font-weight: 250;
+    font-family: var(--font_krona_one);
+    color: var(--text-color);
+    background-color: var(--buttonEncrypt-color);
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .card {
@@ -125,7 +148,7 @@ body {
     width: 500px;
     height: auto;
     border-radius: 5px;
-    margin-top: -15px; /* Adjusted to move card up */
+    margin-top: -15px;
 }
 
 .container {
@@ -134,12 +157,12 @@ body {
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    align-items: center;    
+    align-items: center;
 }
 
 .image-puppet-searching {
     width: auto;
-    height: 280px; /* Reduced height to move the image up */
+    height: 280px;
 }
 
 .empty-message {
@@ -147,13 +170,12 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin: 0 auto; 
+    margin: 0 auto;
     color: var(--noMessage-color);
-    font-family: var(--font_krona_one);    
+    font-family: var(--font_krona_one);
     font-size: 1rem;
     font-weight: 900;
-    margin: 2% 2%; 
-
+    margin: 2% 2%;
 }
 
 .info-message {
@@ -163,7 +185,7 @@ body {
     text-align: center;
     color: var(--infoMessage-color);
     margin: 2% 2%;
-    font-family: var(--font_krona_one);  
+    font-family: var(--font_krona_one);
     font-size: 0.6rem;
     font-weight: 200;
 }
@@ -172,9 +194,101 @@ body {
     background-color: var(--buttonEncrypt-color);
     margin-top: 4%;
     padding: 15px;
-    text-align: center;    
+    text-align: center;
     font-size: 1.25rem;
     font-family: var(--font_montserrat);
     font-weight: 300;
     color: var(--text-color);
+}
+
+/* Media Queries para dispositivos móviles */
+@media only screen and (max-width: 600px) {
+
+    .header{
+        padding: 5%;
+        display: flex;
+        align-content: center;
+    }
+
+    .page-body {
+        flex-direction: column;
+        padding: 0% 3%;
+    }
+
+    .content-body, .card {
+        width: 100%;
+    }
+
+    .buttons-encrypt-decrypts {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .button-encrypt, .button-decrypt, .button-copy {
+        width: 100%;
+    }
+
+    .textarea-input {
+        width: 100%;
+    }
+    .textarea-output {
+        width: 93%;
+    }
+    .info-image, .image-puppet-searching {
+        width: 100%;
+        height: auto;
+    }
+
+    .button-encrypt, .button-decrypt {
+        font-size: 1rem;
+    }
+
+    .empty-message {
+        font-size: 0.875rem;
+    }
+
+    .info-message {
+        font-size: 0.5rem;
+    }
+
+    .footer {
+        font-size: 1rem;
+    }
+}
+
+/* Media Queries para dispositivos medianos */
+@media only screen and (min-width: 600px) and (max-width: 1024px) {
+    .header{
+        padding: 5%;
+        justify-content: center;
+    }
+    .page-body {
+        padding: 0% 4%;
+        gap: 10px;
+    }
+
+    .buttons-encrypt-decrypts {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .button-encrypt, .button-decrypt, .button-copy{
+        width: 100%;
+    }
+
+    .textarea-input {
+        width: 100%;
+    }
+    .textarea-output {
+        width: 93%;
+    }
+
+    .info-image, .image-puppet-searching {
+        width: 80%;
+        height: auto;
+    }
+
+    .card {
+        width: 100%;
+    }
 }

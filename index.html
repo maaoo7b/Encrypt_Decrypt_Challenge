@@ -16,8 +16,8 @@
             <textarea id="message-encrypt" class="textarea-input" rows="5" cols="105" placeholder="Type the text to encrypt here!!"></textarea>                
             <img class="info-image" src="./assets/infoDisclaimer.png" alt="Info disclaimer logo">
             <div class="buttons-encrypt-decrypts">
-                <button class="button-encrypt" onclick="getText();">Encrypt!</button>
-                <button class="button-decrypt" onclick="displayDecryptedMessage();">Decrypt!</button>
+                <button class="button-encrypt" onclick="getText('encrypt');">Encrypt!</button>
+                <button class="button-decrypt" onclick="getText('decrypt');">Decrypt!</button>
             </div>
         </section>         
         
@@ -27,6 +27,7 @@
             <div class="container">
                 <p id="empty-message" class="empty-message">¡¡¡No message was found!!!</p>
                 <p id="info-message" class="info-message">Type the text you want to encrypt/decrypt</p>                
+                <button id="copy-button" class="button-copy" onclick="copyText();">Copy</button>
             </div>            
 
         </div>        

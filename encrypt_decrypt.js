@@ -1,6 +1,11 @@
-function getText(){
-    let textToEncrypt = document.getElementById('message-encrypt');
-    displayEncryptedMessage(textToEncrypt);     
+function getText(action){
+    let message = document.getElementById('message-encrypt').value;
+    if(action === 'encrypt'){
+        document.getElementById('message-encrypt').value = ""; 
+        document.getElementById('message-encrypted').innerHTML = encryptMessage(message);
+    } else{
+        document.getElementById('message-encrypted').innerHTML = decryptMessage(message);
+    }   
 }
 
 function encryptMessage(text){
@@ -13,29 +18,12 @@ function encryptMessage(text){
     return encryptedText;
 }
 
-function displayEncryptedMessage(textToEncrypt){    
-    document.getElementById("image-searching").style.visibility = "hidden";
-    document.getElementById("empty-message").style.visibility = "hidden";
-    document.getElementById("info-message").style.visibility = "hidden";
-    document.getElementById('message-encrypted').innerText = encryptMessage(textToEncrypt.value);
-}
-
-
-function displayDecryptedMessage(){
-    let textToDecrypt = document.getElementById("message-encrypt");
-    document.getElementById("image-searching").style.visibility = "visible";
-    document.getElementById("empty-message").style.visibility = "visible";
-    document.getElementById("info-message").style.visibility = "visible";
-    document.getElementById('message-encrypted').innerText = decryptMessage(textToDecrypt.value);
-}
-
-function decryptMessage(encryptedText) {
-    // Replace each encoded string back to its corresponding vowel
-    let decryptedText = encryptedText
-        .replace(/enter/g, 'e')
-        .replace(/imes/g, 'i')
-        .replace(/ai/g, 'a')
-        .replace(/ober/g, 'o')
-        .replace(/ufat/g, 'u');
+function decryptMessage(text){
+    let decryptedText = text
+    .replace(/enter/g, 'e')
+    .replace(/imes/g, 'i')
+    .replace(/ai/g, 'a')
+    .replace(/ober/g, 'o')
+    .replace(/ufat/g, 'u');
     return decryptedText;
 }
